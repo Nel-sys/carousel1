@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Looping Carousel</title>
+  <style>
+    .carousel {
+      width: 900px; /* increased width */
+      overflow: hidden;
+      margin: 20px auto;
+    }
+
+    .carousel-track {
+      display: flex;
+      width: calc(900px * 2); /* 3 images x 300px each * 2 loops = 1800px */
+      animation: scroll 30s linear infinite;
+    }
+
+    .carousel-track img {
+      width: 180px;
+      height: auto;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-900px); } /* Move by 3 images (1 loop) */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="carousel">
+    <div class="carousel-track">
+      <img src="Pizza.jpg" alt="Slide 1">
+      <img src="Poke.jpg" alt="Slide 2">
+      <img src="Chicke_salad.jpg" alt="Slide 3">
+<img src="Chickendrums_fiveguys.jpg" alt="Slide 4">
+<img src="Strawberries_coffee.jpg" alt="Slide 5">
+      <!-- Duplicate images for seamless loop -->
+      <img src="Pizza.jpg" alt="Slide 1">
+      <img src="Poke.jpg" alt="Slide 2">
+      <img src="Chicke_salad.jpg" alt="Slide 3">
+<img src="Chickendrums_fiveguys.jpg" alt="Slide 4">
+<img src="Strawberries_coffee.jpg" alt="Slide 5">
+    </div>
+  </div>
+
+</body>
+</html>
